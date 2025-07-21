@@ -1,0 +1,8 @@
+[08:58:49] Function B START
+[08:58:50] Function B END (1s)
+[08:58:50] Function A START
+[08:58:53] Function A END (3s)
+[14:23:41] Function A START
+[14:23:41] Function B START
+[14:23:42] Function B END (1.03s)
+[14:23:44] Function A END (3.03s)

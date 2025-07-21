@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Index Page</title>
+  <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            cursor: pointer;
+            background-color: #f2f2f2;
+            position: relative; /* เพิ่ม position เพื่อวางลูกศร */
+        }
+        th.sort-asc::after {
+            content: " ▲"; /* ลูกศรขึ้น */
+            font-size: 12px;
+            color: #0080ff;
+        }
+        th.sort-desc::after {
+            content: " ▼"; /* ลูกศรลง */
+            font-size: 12px;
+            color: #ff0080;
+        }
+		td { vertical-align: top; }
+</style>
+  
+ </head>
+ <body>
+  <table border=1>
+  <tr>
+	<td>1</td>
+	<td><a href='https://thepapers.in/deriv/trade/v2/index.php' target=_blank>Graph Deriv2 </a>( Trade )</td>
+	<td>เทรด  Ver 2</td>
+  </tr>
+  
+  <tr>
+	<td>2</td>
+	<td><a href='https://thepapers.in/deriv/chartObject/main.php' target=_blank>Graph แบบ use Object </a></td>
+	<td>แสดงกราฟแท่งเทียน แบบ 1 นาที  พร้มเส้น ema3,ema5 </td>
+  </tr>
+
+  <tr>
+	<td>3</td>
+	<td><a href='https://thepapers.in/deriv/graphWithSubSignal.php' target=_blank>Graph แบบ use Object Vew Update ทุก/ 2 นาที แบบเพิ่มแท่งใหม่ </a></td>
+	<td>แสดงกราฟแท่งเทียน แบบ  update ทุก 2 วินาที   graphWithSubSignal.php</td>
+  </tr>
+
+  <tr>
+	<td>4</td>
+	<td><a href='https://thepapers.in/deriv/ohlcUpdateCandle.php' target=_blank>Graph แบบ use Object Vew Update ทุก/ 2 นาที แบบปรับปรุง แท่งเดิม </a></td>
+	<td>แสดงกราฟแท่งเทียน แบบ  update ทุก 2 วินาที   ohlcUpdateCandle.php</td>
+  </tr>
+
+deriv/ohlcUpdateCandle.php
+  <tr>
+	<td>3</td>
+	<td><a href='https://thepapers.in/deriv/sample2.php' target=_blank>Form การเทรด Ver 1.0 (Sample2.php)</td>
+	<td></td>
+  </tr>
+   
+  <tr>
+	<td>4</td>
+	<td><a href='https://lovetoshopmall.com/iqlab/tradeview3.php#ex1-tabs-3' target=_blank>กราฟแบบ ไว้ดูตาม TimeFrame ต่างๆ พร้อม สร้างข้อมูล Analysis(TurnPoint,CutPoint)+ Lab การเทรด </td>
+	<td></td>
+  </tr>
+
+  <tr>
+	<td>5</td>
+	<td><a href='https://thepapers.in/deriv/graphAutoRefresh.php' target=_blank>กราฟแบบ AutoRefresh ทุก 2 วินาที</td>
+	<td></td>
+  </tr>
+
+  <tr>
+	<td>6</td>
+	<td><a href='https://thepapers.in/deriv/newDerivObject/labCandleDerivV2.php' target=_blank>labCandleDerivV2.php สำหรับ ดึงข้อมูล Candle และทำ Lab ต่างๆมากมาย </td>
+	<td></td>
+  </tr>
+
+  <tr>
+	<td>7</td>
+	<td><a href='https://thepapers.in/deriv/newDerivObject/CandleFetchV2.php' target=_blank>สำหรับ ดึงข้อมูล latest และ ตรวจข้อมูล Indicator ต่างๆ  ด้วย  JS</td>
+	<td>แสดงจุด TurnPoint,Loss,</td>
+	<td>labCandleDerivV2.php
+|
+|-- Chart.js<br>
+|-- me.doAjaxGetSignal()<br>
+|----- deriv/newDerivObject/AjaxGetSignal.php<br>
+|--------- deriv/newDerivObject/TradingConditionAnalyzer.php<br>
+|--------- deriv/newDerivObject/testMarkRisk.php<br>
+|-- deriv/newDerivObject/testMarkRisk.php<br> 
+</td>
+  </tr>
+
+  <tr>
+	<td>8</td>
+	<td><a href='https://thepapers.in/deriv/phpCandleStick3.php' target=_blank>สำหรับ ดึง ข้อูล Candle จาก Deriv และสร้าง  Indicator ต่างๆ  ด้วย  PHP</td>
+	<td></td>
+
+  </tr>
+
+  <tr>
+	<td>9</td>
+	<td><a href='https://thepapers.in/deriv/phpTrade.php' target=_blank>การเข้า เทรด Deriv   ด้วย  PHP</td>
+	<td></td>
+
+  </tr>
+
+  <tr>
+	<td>10</td>
+	<td><a href='https://thepapers.in/deriv/devlab/testsocket.php' target=_blank>Subscribe เพื่อรับข้อมูล Candle จาก Deriv และปรับ จาก  ohlc ให้อยู่ในรูปแบบ  Candles </td>
+	<td></td>
+
+  </tr>
+
+  <tr>
+	<td>11</td>
+	<td><a href='https://thepapers.in/deriv/devlab/phpCreateAnaly.php' target=_blank>สร้างข้อมูล Analy ด้วย php </td>
+	<td></td>
+
+  </tr>
+  <tr>
+	<td>12</td>
+	<td><a href='https://thepapers.in/deriv/desc_proposal_open_contract.php' target=_blank>ข้อมูล contract  response จาก Deriv </td>
+	<td></td>
+
+  </tr>
+
+  
+
+  <tr>
+	<td>12</td>
+	<td><a href='https://thepapers.in/deriv/newDerivObject/mainpage.php' target=_blank>Trade Deriv Ver 2.0</td>
+	<td></td>
+  </tr>
+  <tr>
+	<td>13</td>
+	<td><a href='https://thepapers.in/deriv/newDerivObject/labCutPoint.php' target=_blank>Lab CutPoint ต้องใช้ร่วมกับ  labCandleDerivV2.php จากข้อ 6</td>
+	<td>อ่านข้อมูล  dataTest.json ที่เกิดจาก  labCandleDerivV2.php แล้วนำมาคำนวณหา การ Win/Loss </td>
+  </tr>
+
+  <tr>
+	<td>14</td>
+	<td><a href='https://thepapers.in/deriv/newDerivObject/testMarkRisk.php' target=_blank>Lab CutRiskPoint ต้องใช้ร่วมกับ  labCandleDerivV2.php จากข้อ 6</td>
+	<td>อ่านข้อมูล  dataTest.json ที่เกิดจาก   labCandleDerivV2.php ที่ผ่านการ Calculate CutRiskPoint มาแล้ว  แล้วนำมาคำนวณหา การ Win/Loss </td>
+  </tr>
+
+  <tr>
+	<td>15</td>
+	<td><a href='https://thepapers.in/deriv/newDerivObject/TradingConditionAnalyzer.php' target=_blank>คือ Lab CutRiskPoint ต้องใช้ร่วมกับ  labCandleDerivV2.php จากข้อ 6</td>
+	<td> อ่านข้อมูล rawData.json ที่เกิดจาก getAnalyData() ของ AjaxGetSignal.ph pและ labCandleDerivV2.php </td>
+  </tr>
+
+<tr>
+	<td colspan=10 style='heoght:40px;background:#0080ff'> เครื่องมือ วิเคราะห์ </td>
+
+ </tr>
+
+<tr>
+	<td>16</td>
+	<td><a href='https://thepapers.in/deriv/meterMile.php' target=_blank>ต้นแบบ Mile meter</td>
+ </tr>
+
+ <tr>
+	<td>17</td>
+	<td><a href='https://thepapers.in/deriv/meter2.php' target=_blank>ต้นแบบ  meter</td>
+ </tr>
+ <tr>
+	<td>18</td>
+	<td><a href='https://thepapers.in/deriv/meter2.php' target=_blank>ต้นแบบ  meter+ Graph</td>
+ </tr>
+
+ <tr>
+	<td>19</td>
+	<td><a href='https://thepapers.in/deriv/meter2.php' target=_blank>ต้นแบบ  meter+ Graph</td>
+ </tr>
+
+ <tr>
+	<td colspan=10 style='heoght:40px;background:#00ff80'> เครื่องมือ วิเคราะห์  ขั้นสูง</td>
+ </tr>
+ <tr>
+	<td>1</td>
+	<td><a href='https://thepapers.in/deriv/adxAssetList.php' target=_blank>รายการ Asset+ ADX</td>
+ </tr>
+
+
+
+ <tr>
+	<td>2</td>
+	<td><a href='https://thepapers.in/deriv/adxAssetList.php' target=_blank>clsTradeVer2.php</td>
+	<td>ใช้ร่วมกับ  Python และ  Php เพื่อ วิเคราะห์  </td>
+ </tr>
+
+ <tr>
+	<td>3</td>
+	<td> class สำหรับสร้าง Indicator,AdvanceIndicator</td>
+	<td>
+	 <h4>รายการไฟล์ และ ตัวอย่าง การเรียกใช้  </h4>
+	<ol style='line-height:25px'>
+	 <li>/deriv/api/phpCandlestickIndy.php </li>
+	 <li>/api/phpAdvanceIndy.php </li>
+	 <li>ตัวอย่างการใช้  <span style='color:red;font-weight:bold'>deriv/newDerivObject/AjaxGetSignal.php ชื่อ function getAnalysisData($data) </span>  </li>
+	 <li> </li>
+	</ol>
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>ema3,ema5,emaAbove,TurnType,PreviousTurnType,....</td>
+ </tr>
+
+ <tr>
+	<td>4</td>
+	<td> class สำหรับหา warning ของ แท่งเทียน  สร้างจาก Claude </td>
+	<td>
+	 <h4>รายการไฟล์ และ ตัวอย่าง การเรียกใช้  </h4>
+	<ol style='line-height:25px'>
+	 <li>deriv/newDerivObject/TradingConditionAnalyzer.php</li>
+
+	 <li>ตัวอย่างการใช้  <span style='color:red;font-weight:bold'>deriv/newDerivObject/AjaxGetSignal.php ชื่อ function getAnalysisData($data)-->getRiskAnalysisClaude() </span>  </li>
+	 <li> </li>
+	</ol>
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>warning number ,Risk Level</td>
+
+ </tr>
+
+ <tr>
+	<td>5</td>
+	<td> class สำหรับหา warning ของ แท่งเทียน  สร้างจาก DeepSeek </td>
+	<td>
+	 <h4>รายการไฟล์ และ ตัวอย่าง การเรียกใช้  </h4>
+	<ol style='line-height:25px'>
+	 <li>deriv/newDerivObject/TradingSignalCheckerV3.php</li>
+
+	 <li>ตัวอย่างการใช้  <span style='color:red;font-weight:bold'>deriv/newDerivObject/AjaxGetSignal.php ชื่อ function getAnalysisData($data)-->getsignalCheckerDeepSeek() </span>  </li>
+	 <li> </li>
+	</ol>
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>warning number ,Risk Level</td>
+
+ </tr>
+
+<tr>
+	<td>6</td>
+	<td> class สำหรับหา Forecast  ของ แท่งเทียนถัดไป   สร้างจาก Claude </td>
+	<td>
+	 <h4>รายการไฟล์ และ ตัวอย่าง การเรียกใช้  </h4>
+	<ol style='line-height:25px'>
+	 <li>deriv/candleAnalyzerClaude.php</li>
+
+	 <li>ตัวอย่างการใช้  <span style='color:red;font-weight:bold'>deriv/candleAnalyzerClaude.php ชื่อ function HowToPlug() </span>  </li>
+	 <li> </li>
+	</ol>
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>Prediction</td>
+ </tr>
+
+ <tr>
+	<td>7</td>
+	<td> class สำหรับหา Forecast  ของ แท่งเทียนถัดไป   สร้างจาก DeepSeek </td>
+	<td>
+	 <h4>รายการไฟล์ และ ตัวอย่าง การเรียกใช้  </h4>
+	<ol style='line-height:25px'>
+	 <li>deriv/CandlestickAnalyzer_DeepSeek.php</li>
+
+	 <li>ตัวอย่างการใช้  <span style='color:red;font-weight:bold'>deriv/CandlestickAnalyzer_DeepSeek.php ชื่อ function HowToPlug() </span>  </li>
+	 <li> </li>
+	</ol>
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>Prediction</td>
+ </tr>
+
+ <tr>
+	<td>8</td>
+	<td>หา action จาก clsTradeV2.php <a href='https://lovetoshopmall.com/iqlab/CreateConcludeDayByClass.php?sDay=2024-03-07'>
+	https://lovetoshopmall.com/iqlab/CreateConcludeDayByClass.php?sDay=2024-03-07</a>
+	<td>
+	 <h4>รายการไฟล์ และ ตัวอย่าง การเรียกใช้  </h4>
+	<ol style='line-height:25px'>
+	 <li>deriv/CandlestickAnalyzer_DeepSeek.php</li>
+
+	 <li>ตัวอย่างการใช้  <span style='color:red;font-weight:bold'>deriv/CandlestickAnalyzer_DeepSeek.php ชื่อ function HowToPlug() </span>  </li>
+	 <li> </li>
+	</ol>
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>Prediction</td>
+ </tr>
+
+ <tr>
+	<td>9</td>
+	<td>สรป การ หา Analyze รวม <a href='https://thepapers.in/deriv/concludeAnalyzeTools.php'>
+	deriv/concludeAnalyzeTools.php</a>
+	<td>
+	 <h4>รายการไฟล์ และ ตัวอย่าง การเรียกใช้  </h4>
+	<ol style='line-height:25px'>
+	 <li>deriv/CandlestickAnalyzer_DeepSeek.php</li>
+
+	 <li>ตัวอย่างการใช้  <span style='color:red;font-weight:bold'>deriv/CandlestickAnalyzer_DeepSeek.php ชื่อ function HowToPlug() </span>  </li>
+	 <li> </li>
+	</ol>
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>Prediction</td>
+ </tr>
+
+ <tr>
+	<td>9</td>
+	<td>สรป การ หา Analyze รวม <a href='https://thepapers.in/deriv/miixAnalyze.php'>
+	deriv/mixAnalyze.php</a>
+	<td>
+	 <h4>หา analyze ทั้งหมด ทั้งจาก deepseek,claude,chatgpt,iqlab</h4>
+	<ol style='line-height:25px'>
+	 
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>Prediction</td>
+</tr>
+<tr>
+	<td colspan=10 style='heoght:40px;background:#ffff00'>
+	รวมโปรแกรม Pre เทรด
+	</td>
+ </tr>
+ <tr>
+	<td>1</td>
+	<td>Asset Analyzer
+	<a href='https://thepapers.in/deriv/deriv_candlestick_chartV2.php'
+	target= '_blank'>
+	Asset Analyzer</a>
+	<td>
+	 <h4>บอกว่า มี Asset อะไรบ้างแยกตามหมวดหมู่ และ สามารถ วิเคราะห์ ให้ดู แต่ละรายการได้</h4>
+	<ol style='line-height:25px'>
+	 
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>Prediction</td>
+</tr>
+
+<tr>
+	<td>2</td>
+	<td>
+	<a href='https://thepapers.in/deriv/newLabV2.php'
+	target= '_blank'>Asset Trend Analyzer</a>
+	<td>
+	 <h4>
+	   วาดกราฟทั้งแบบ History และ Latest + RSI รวมทั้งเปลี่ยน Timeframe,ema ทั้ง 2 เส้น  ของ Graph ได้ทันที
+	   เอาไว้ วิเคราะห์ TimeFrame และ RSI
+	 </h4>
+	<ol style='line-height:25px'>
+	 
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>Prediction</td>
+</tr>
+https://thepapers.in/deriv/twinTimeframe2.php
+<tr>
+	<td>3</td>
+	<td>
+	<a href='https://thepapers.in/deriv/twinTimeframe2.php'
+	target= '_blank'>Analy By 2 TimeFrame</a>
+	<td>
+	 <h4>
+	  แสดง Graph เป็น 2 TimeFrame คู่กัน  เพื่อที่จะได้ วิเคราะห์ timeframe เล็ก จาก TimeFrame ใหญ่
+	 </h4>
+	<ol style='line-height:25px'>
+	 
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>Prediction</td>
+</tr>
+
+<tr>
+	<td>3</td>
+	<td>
+	<a href='https://thepapers.in/iqlab/CandlestickTrendAnalyzer.php'
+	target= '_blank'>Asset Trend Analyzer</a>
+	<td>
+	 <h4>
+	  วิเคราะห์ออกมาเป็น ตัวเลข ถึง Trend ในช่วงต่างๆ 
+	 </h4>
+	<ol style='line-height:25px'>
+	 
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>Prediction</td>
+</tr>
+
+<tr>
+	<td>4</td>
+	<td>
+	<a href='https://thepapers.in/deriv/predictAll.php'
+	target= '_blank'>Lab การ หา Action ด้วย วิธีต่างๆ 4 วิธี     <br>(Claude,ChatGPT,DeepSeek,PkTrade)</a>
+	<td>
+	 <h4>
+	  Lab การ หา Action ด้วย วิธีต่างๆ 4 วิธี   (deriv/predictAll.php)
+	 </h4>
+	<ol style='line-height:25px'>
+	 
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>สรุป  Action ของ method ต่างๆ</td>
+</tr>
+
+
+
+
+
+<tr>
+	<td colspan=10 style='heoght:40px;background:#00ff80'>
+	รวมโปรแกรมเทรด
+	</td>
+</tr>
+ 
+<tr>
+	<td>1</td>
+	<td>Trade V1 
+	<a href='https://thepapers.in/deriv/newDerivObject/mainpage.php'
+	target= '_blank'>
+	Trade V1</a>
+	<td>
+	 <h4>เทรดแบบ มี   2 Graph (trade/v2/index.php)</h4>
+	<ol style='line-height:25px'>
+	 
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>Prediction</td>
+</tr>
+
+<tr>
+
+	<td>2</td>
+	<td>Trade V2 
+	<a href='https://thepapers.in/deriv/trade/v2/index.php'
+	target= '_blank'>
+	Trade V2</a>
+	<td>
+	 <h4>เทรดแบบ มี  1 Graph (trade/v2/index.php)</h4>
+	<ol style='line-height:25px'>
+	 
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>Prediction</td>
+ </tr>
+
+ <tr>
+
+	<td>3</td>
+	<td>Trade V3 
+	<a href='https://thepapers.in/deriv/testacp.php?assetCode=R_100&action=PUT'
+	target= '_blank'>
+	Trade V3</a>
+	<td>
+	 <h4>เทรดแบบ มี 2 Graph (testacp.php)</h4>
+	<ol style='line-height:25px'>
+	 
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>Prediction</td>
+ </tr>
+ <tr>
+	<td>4</td>
+	<td>Trade PHP มีแต่ฟอร์ม Trade ยังไม่ได้ 
+	<a href='https://thepapers.in/deriv/phpTradeWithADX.php'
+	target= '_blank'>
+	Trade 1</a>
+	<td>
+	 <h4>Form เทรดแบบ phpTradeWithADX.php</h4>
+	<ol style='line-height:25px'>
+	 
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>Prediction</td>
+ </tr>
+
+ <tr>
+	<td>5</td>
+	<td>Trade PHP โดย หา Indy ก่อน
+	<a href='https://thepapers.in/deriv/phpCandleStick3.php'
+	target= '_blank'>
+	Trade PHP + Indy</a>
+	<td>
+	 <h4>Form เทรดแบบ  phpCandleStick3.php-->phpTradev2.php?symbol=R_75&action=CALL</h4>
+	<ol style='line-height:25px'>
+	 
+	</td>
+	<td style='vertical-align: top'><h4>ข้อมูลที่ได้กลับไป  </h4>Prediction</td>
+ </tr>
+
+ 
+
+
+
+
+ 
+
+
+
+miixAnalyze.php  
+  </table>
+ </body>
+</html>
+
+Chrome
+ - https://lovetoshopmall.com/iqlab/labSideWay.php
+ - https://lovetoshopmall.com/iqlab/CreateConcludeDayByClass.php?sDay=2024-03-01
+ - https://thepapers.in/deriv/newDerivObject/testMarkRisk.php
+ - https://thepapers.in/deriv/ohlc1sec.php
+ - https://thepapers.in/deriv/newDerivObject/labCandleDerivV2.php
+ - https://thepapers.in/deriv/temp.php
+ - https://thepapers.in/deriv/test3.php
+ - https://thepapers.in/deriv/concludeAnalyzeTools.php
+ - https://thepapers.in/deriv/predictAll.php
+ - https://thepapers.in/testa.php
+ - https://lovetoshopmall.com/iqlab/clsTradeVer2.php
+ - https://thepapers.in/iqlab/newLab.php
+ - https://thepapers.in/deriv/mixAnalyze.php
+ - https://thepapers.in/iqlab/testClsTrade.php
+
+EditPlus
+ - deriv/api/phpCandlestickIndy.php
+ - deriv/newDerivObject/testMarkRisk.php
+ - deriv/AjaxNewTrade.php
+ - deriv/DerivCandlestickManager.js
+ - deriv/derivTestClass.js
+ - deriv/ohlc1sec.php
+ - deriv/temp.php
+ - deriv/newDerivObject/mainpage.php
+ - deriv/test3.php
+ - deriv/concludeAnalyzeTools.php
+ - deriv/newDerivObject/AjaxGetSignal.php
+ - deriv/mixAnalyze.php
+ - iqlab/CreateConcludeDayByClass.php
+ - iqlab/testClsTrade.php
+ - iqlab/clsTradeVer0/clsTradeVer_Object.php
+ - iqlab/clsTradeVer0/getActionFromIDVerObject.php
+ - deriv/CandlestickAnalyzer_DeepSeek.php
+ - deriv/predictAll.php
+ - deriv/phpAllIndicator.php
+ - deriv/newDerivObject/labCandleDerivV2.php
