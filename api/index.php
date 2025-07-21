@@ -8,8 +8,13 @@ header('Access-Control-Allow-Origin: *');
    error_reporting(E_ALL);   
    $data = json_decode(file_get_contents('php://input'), true);
    if ($data) {
-     echo "Have Data Post" ;
-      print_r($data) ;
+      
+      $sObj = new stdClass();
+      $sObj->No   = 1 ;
+      $sObj->candleID   = 'AAAA';
+      echo JSON_ENCODE($sObj) ;
+
+  $sObj->timefrom_unix   = $result2[$i]["timefrom_unix"] ;
    } else {   
      echo "No Data USE Vercel IN API " ;
    }
