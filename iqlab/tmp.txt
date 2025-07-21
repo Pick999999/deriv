@@ -1,0 +1,2054 @@
+<?php
+
+
+// Step 6-24-3
+// Number of conditions: 7
+// Case No =1
+// Case No =1
+
+/* Case No =1 */
+if ($row['PreviousTurnType'] =='N' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['PreviousTurnTypeBack3'] =='TurnDown' &&
+    $row['PreviousTurnTypeBack4'] =='TurnUp' &&
+    (abs($row['ema3SlopeValue']) < 5) &&
+    $row['ema3slopeDirection'] =='Down' && 
+    $row['emaConflict'] =='5-3-G') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';        
+        $actionReason .= '->Code6-24-3(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-24-2(R)';
+    }
+}
+
+// Step 6-26-8
+// Number of conditions: 7
+// Case No =2
+// Case No =2
+
+/* Case No =2 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['PreviousTurnTypeBack3'] =='N' &&
+    $row['PreviousTurnTypeBack4'] =='N' &&
+    $row['ema3slopeDirection'] =='Down' && 
+    $row['emaConflict'] =='3-5-R' &&
+    $row['MACDConvergence'] =='Conver') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';                
+        $actionReason .= '->Code6-26-8(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';                
+        $actionReason .= '->Code6-26-8(R)';
+    }
+}
+
+// Step 1-1-4
+// Number of conditions: 6
+// Case No =3
+// Case No =3
+
+/* Case No =3 */
+if (
+    $row['ema3slopeDirection'] =='Down' && 
+    $row['CutPointType'] =='N' && 
+    $row['PreviousTurnType'] =='' &&
+    $row['PreviousTurnTypeBack2'] =='TurnDown' &&
+    $row['PreviousTurnTypeBack3'] =='TurnUp' &&
+    $row['PreviousTurnTypeBack3'] =='N') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code1-1-4(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code1-1-4(R)';
+    }
+}
+
+// Step 1-1-5
+// Number of conditions: 6
+// Case No =4
+// Case No =4
+
+/* Case No =4 */
+if (
+    $row['ema3slopeDirection'] =='Down' && 
+    $row['CutPointType'] =='N' && 
+    $row['PreviousTurnType'] =='' &&
+    $row['PreviousTurnTypeBack2'] =='TurnDown' &&
+    $row['PreviousTurnTypeBack3'] =='TurnUp' &&
+    $row['PreviousTurnTypeBack3'] =='N') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';        
+        $actionReason .= '->Code1-1-4(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code1-1-4(R)';
+    }
+}
+
+// Step 1-1-8
+// Number of conditions: 6
+// Case No =5
+// Case No =5
+
+/* Case No =5 */
+if (
+    $row['ema3slopeDirection'] =='Down' && 
+    $row['CutPointType'] =='3->5' && 
+    $row['PreviousTurnType'] =='N' &&
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['PreviousTurnTypeBack3'] =='TurnDown' &&
+    $row['MACDHeight'] < 8) {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code1-1-3(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code1-1-3(R)';
+    }
+}
+
+// Step 6-5-3
+// Number of conditions: 6
+// Case No =6
+// Case No =6
+
+/* Case No =6 */
+if ($row['PreviousTurnType'] =='TurnUp' && 
+    $row['PreviousTurnTypeBack2'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack3'] =='N' && 
+    $row['ema3slopeDirection']=='Up' && 
+    $row['emaConflict']=='' && 
+    $row['ema3SlopeValue'] < 10) {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-5-3(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-5-3(R)';
+    }
+}
+
+// Step 6-9-2
+// Number of conditions: 6
+// Case No =7
+// Case No =7
+
+/* Case No =7 */
+if ($row['ema3slopeDirection'] =='Up' && 
+    $row['emaConflict'] =='5-3-G' && 
+    $row['PreviousTurnType'] == '' && 
+    $row['PreviousTurnTypeBack2'] == 'TurnUp' && 
+    $row['PreviousTurnTypeBack3'] == 'N' && 
+    $row['MACDHeight'] < 4) {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-9-2(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-9-2(R)';
+    }
+}
+
+// Step 6-17-2
+// Number of conditions: 6
+// Case No =8
+// Case No =8
+
+/* Case No =8 */
+if ($row['PreviousTurnType'] =='TurnUp' && 
+    $row['PreviousTurnTypeBack2'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack3'] =='N' && 
+    $row['PreviousTurnTypeBack4'] =='TurnUp' &&
+    ($row['emaConflict']) == '5-3-G' && 
+    $row['ema3slopeDirection'] =='Up') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-17-2(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-17-2(R)';
+    }
+}
+
+// Step 6-22-2
+// Number of conditions: 6
+// Case No =9
+// Case No =9
+
+/* Case No =9 */
+if ($row['PreviousTurnType'] =='N' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['PreviousTurnTypeBack3'] =='TurnUp' && 
+    $row['PreviousTurnTypeBack4'] =='TurnDown' &&
+    $row['emaConflict'] == '3-5-R' && 
+    $row['ema3slopeDirection'] =='Up') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-22-2(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-22-2(R)';
+    }
+}
+
+// Step 1-1-3
+// Number of conditions: 5
+// Case No =10
+// Case No =10
+
+/* Case No =10 */
+if (
+    $row['ema3slopeDirection'] =='Down' && 
+    $row['CutPointType'] =='3->5' && 
+    $row['PreviousTurnType'] =='N' &&
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['PreviousTurnTypeBack3'] =='TurnDown') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code1-1-3(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code1-1-3(R)';
+    }
+}
+
+// Step 1-1-12
+// Number of conditions: 5
+// Case No =11
+// Case No =11
+
+/* Case No =11 */
+if (
+    $row['PreviousTurnType'] =='N' &&
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['PreviousTurnTypeBack3'] =='TurnDown' &&
+    $row['PreviousTurnTypeBack4'] =='N' && 
+    $row['CutPointType'] == '3->5') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code1-1-10(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code1-1-10(R)';
+    }
+}
+
+// Step 1-1-13
+// Number of conditions: 5
+// Case No =12
+// Case No =12
+
+/* Case No =12 */
+if (
+    $row['PreviousTurnType'] =='N' &&
+    $row['PreviousTurnTypeBack2'] =='TurnDown' &&
+    $row['PreviousTurnTypeBack3'] =='TurnUp' &&
+    $row['PreviousTurnTypeBack4'] =='N' && 
+    $row['CutPointType'] == 'N') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code1-1-13(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code1-1-13(R)';
+    }
+}
+
+// Step 6-9-1
+// Number of conditions: 5
+// Case No =13
+// Case No =13
+
+/* Case No =13 */
+if ($row['ema3slopeDirection'] =='Up' && 
+    $row['emaConflict'] =='5-3-G' && 
+    $row['PreviousTurnType'] == 'N' && 
+    $row['PreviousTurnTypeBack2'] == 'TurnUp' && 
+    $row['PreviousTurnTypeBack3'] == 'N') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-9-1(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-9-1(R)';
+    }
+}
+
+// Step 6-22-1
+// Number of conditions: 5
+// Case No =14
+// Case No =14
+
+/* Case No =14 */
+if ($row['PreviousTurnType'] =='N' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['emaConflict'] == '3-5-R' && 
+    $row['ema3slopeDirection'] =='Up' &&
+    (abs($row['MACDHeight']) > 15)) {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-22-1(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-22-1(R)';
+    }
+}
+
+// Step 6-22-3
+// Number of conditions: 5
+// Case No =15
+// Case No =15
+
+/* Case No =15 */
+if ($row['PreviousTurnType'] =='N' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['PreviousTurnTypeBack3'] =='TurnUp' &&
+    $row['emaConflict'] == '3-5-R' && 
+    $row['ema3slopeDirection'] =='Up') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-22-3(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-22-3(R)';
+    }
+}
+
+// Step 6-24-2
+// Number of conditions: 5
+// Case No =16
+// Case No =16
+
+/* Case No =16 */
+if ($row['PreviousTurnType'] =='N' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    abs($row['ema3SlopeValue']) < 8 &&
+    $row['ema3slopeDirection'] =='Down' && 
+    $row['emaConflict'] =='5-3-G') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-24-2(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-24-2(R)';
+    }
+}
+
+// Step 6-24-4
+// Number of conditions: 5
+// Case No =17
+// Case No =17
+
+/* Case No =17 */
+if ($row['PreviousTurnType'] =='N' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['PreviousTurnTypeBack3'] =='TurnDown' &&
+    $row['ema3slopeDirection'] =='Down' && 
+    $row['emaConflict'] =='5-3-G') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-24-4(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-24-4(R)';
+    }
+}
+
+// Step 6-24-6
+// Number of conditions: 5
+// Case No =18
+// Case No =18
+
+/* Case No =18 */
+if ($row['PreviousTurnType'] =='N' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['PreviousTurnTypeBack4'] =='TurnDown' &&
+    $row['ema3slopeDirection'] =='Down' && 
+    $row['emaConflict'] =='5-3-G') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-24-6(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-24-6(R)';
+    }
+}
+
+// Step 6-25-32
+// Number of conditions: 5
+// Case No =19
+// Case No =19
+
+/* Case No =19 */
+if ($row['PreviousTurnType'] =='TurnUp' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['ema3slopeDirection'] =='Up' && 
+    (abs($row['MACDHeight']) > 5) &&
+    $row['emaConflict'] =='5-3-G') {
+    if ( $row['thisColor'] =='Red') {    
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-25-32(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-25-32(R)';
+    }
+}
+
+// Step 6-25-4
+// Number of conditions: 5
+// Case No =20
+// Case No =20
+
+/* Case No =20 */
+if ($row['PreviousTurnType'] =='TurnUp' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['ema3slopeDirection'] =='Up' && 
+    (abs($row['MACDHeight']) > 5) &&
+    $row['CutPointType'] == '5->3') {
+    if ( $row['thisColor'] =='Red') {    
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-25-4(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-25-4(R)';
+    }
+}
+
+// Step 6-26-6
+// Number of conditions: 5
+// Case No =21
+// Case No =21
+
+/* Case No =21 */
+if ($row['PreviousTurnType'] =='N' && 
+    $row['PreviousTurnTypeBack2'] =='TurnDown' &&
+    $row['PreviousTurnTypeBack3'] =='N' &&
+    $row['ema3slopeDirection'] =='Down' && 
+    $row['emaConflict'] == '3-5-R') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-26-6(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-26-6(R)';
+    }
+}
+
+// Step 6-27
+// Number of conditions: 5
+// Case No =22
+// Case No =22
+
+/* Case No =22 */
+if ($row['PreviousTurnType'] == 'N' && 
+    $row['PreviousTurnTypeBack2'] == 'N' && 
+    $row['emaConflict'] == '3-5-R' && 
+    $row['ema3slopeDirection'] =='Up' && 
+    $row['PreviousTurnTypeBack4'] == 'TurnUp') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-27(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-27(R)';
+    }
+}
+
+// Step 1-1-2
+// Number of conditions: 3
+// Case No =23
+// Case No =23
+
+/* Case No =23 */
+if (
+    $row['PreviousTurnType'] =='N' &&
+    $row['PreviousTurnTypeBack2'] =='TurnUp' &&
+    $row['PreviousTurnTypeBack3'] =='TurnDown') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code1-1-2(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code1-1-2(R)';
+    }
+}
+
+// Step 1-1-6
+// Number of conditions: 4
+// Case No =24
+// Case No =24
+
+/* Case No =24 */
+if (
+    $row['PreviousTurnType'] =='N' &&
+    $row['PreviousTurnTypeBack2'] =='TurnDown' &&
+    $row['PreviousTurnTypeBack3'] =='N' &&
+    $row['PreviousTurnTypeBack4'] =='TurnUp') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code1-1-6(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code1-1-6(R)';
+    }
+}
+
+// Step 1-1-7
+// Number of conditions: 4
+// Case No =25
+// Case No =25
+
+/* Case No =25 */
+if (
+    $row['PreviousTurnType'] =='N' &&
+    $row['PreviousTurnTypeBack2'] =='TurnUp' &&
+    $row['PreviousTurnTypeBack3'] =='TurnDown' &&
+    $row['CutPointType'] =='5->3') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code1-1-7(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code1-1-7(R)';
+    }
+}
+
+// Step 1-1-9
+// Number of conditions: 4
+// Case No =26
+// Case No =26
+
+/* Case No =26 */
+if (
+    $row['PreviousTurnType'] =='N' &&
+    $row['PreviousTurnTypeBack2'] =='TurnDown' &&
+    $row['PreviousTurnTypeBack3'] =='TurnUp' &&
+    $row['PreviousTurnTypeBack4'] =='N') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code1-1-9(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code1-1-9(R)';
+    }
+}
+
+// Step 1-1-10
+// Number of conditions: 4
+// Case No =27
+// Case No =27
+
+/* Case No =27 */
+if (
+    $row['PreviousTurnType'] =='N' &&
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['PreviousTurnTypeBack3'] =='TurnDown' &&
+    $row['PreviousTurnTypeBack4'] =='N') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code1-1-10(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code1-1-10(R)';
+    }
+}
+
+// Step 1-1-11
+// Number of conditions: 4
+// Case No =28
+// Case No =28
+
+/* Case No =28 */
+if (
+    $row['PreviousTurnType'] =='N' &&
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['PreviousTurnTypeBack3'] =='N' &&
+    $row['PreviousTurnTypeBack4'] =='TurnUp') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code1-1-11(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code1-1-11(R)';
+    }
+}
+
+// Step 2-2
+// Number of conditions: 4
+// Case No =29
+// Case No =29
+
+/* Case No =29 */
+if ($row['emaConflict'] == '3-5-R' && 
+    $macdConver == 'Conver' &&
+    $row['ema3slopeDirection'] =='Down' && 
+    $row['PreviousTurnType']=='TurnDown') {
+    $thisAction = 'PUT'; 
+    $forecastColor = 'Red';
+    
+    
+    $actionReason .= '->Code2_2(R)';
+    $LockedAction = false;
+}
+
+// Step 6-5-2
+// Number of conditions: 4
+// Case No =30
+// Case No =30
+
+/* Case No =30 */
+if ($row['PreviousTurnType'] =='TurnUp' && 
+    $row['PreviousTurnTypeBack2'] =='TurnDown' && 
+    $row['ema3slopeDirection']=='Up' && 
+    $row['emaConflict']=='N') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-5-2(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-5-2(R)';
+    }
+}
+
+// Step 6-7-2
+// Number of conditions: 4
+// Case No =31
+// Case No =31
+
+/* Case No =31 */
+if ($row['ema3slopeDirection'] =='Up' && 
+    $row['emaConflict'] =='3-5-R' &&
+    $row['PreviousTurnTypeBack2'] == 'TurnUp' &&
+    $row['CutPointType'] == '5->3') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-7-2(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-7-1(R)';
+    }
+}
+
+// Step 6-7-3
+// Number of conditions: 4
+// Case No =32
+// Case No =32
+
+/* Case No =32 */
+if ($row['ema3slopeDirection'] =='Up' && 
+    $row['emaConflict'] =='3-5-R' &&
+    $row['PreviousTurnTypeBack2'] == 'TurnUp' &&
+    $row['PreviousTurnTypeBack3'] == 'TurnDown') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-7-3(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-7-3(R)';
+    }
+}
+
+// Step 6-8-2
+// Number of conditions: 4
+// Case No =33
+// Case No =33
+
+/* Case No =33 */
+if ($row['ema3slopeDirection'] =='Down' && 
+    $row['emaConflict'] =='3-5-R' &&
+    $row['PreviousTurnTypeBack2'] =='TurnDown' && 
+    $row['MACDHeight'] <=1) {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-8-2(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-8-2(R)';
+    }
+}
+
+// Step 6-9-3
+// Number of conditions: 4
+// Case No =34
+// Case No =34
+
+/* Case No =34 */
+if ($row['ema3slopeDirection'] =='Up' && 
+    $row['emaConflict'] =='5-3-G' &&
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['PreviousTurnTypeBack3'] =='TurnUp') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-9-3(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-9-3(R)';
+    }
+}
+
+// Step 6-12
+// Number of conditions: 4
+// Case No =35
+// Case No =35
+
+/* Case No =35 */
+if ($row['PreviousTurnType'] =='N' && 
+    $row['PreviousTurnTypeBack2'] =='TurnUp' && 
+    $row['emaConflict'] =='3-5-R' && 
+    abs($row['MACDHeight']*1000*1000) < 10) {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-12(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-12(R)';
+    }
+}
+
+// Step 6-13
+// Number of conditions: 4
+// Case No =36
+// Case No =36
+
+/* Case No =36 */
+if ($row['PreviousTurnType'] =='TurnUp' && 
+    $row['PreviousTurnTypeBack2'] =='N' && 
+    $row['emaConflict'] =='5-3-G' && 
+    $row['ema3slopeDirection']=='Up') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-13(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-13(R)';
+    }
+}
+
+// Step 6-16-2
+// Number of conditions: 4
+// Case No =37
+// Case No =37
+
+/* Case No =37 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack2'] =='TurnUp' &&
+    $row['ema3slopeDirection'] =='Up' &&
+    abs($row['ema3SlopeValue']) > 20) {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-16(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-16(R)';
+    }
+}
+
+// Step 6-16-3
+// Number of conditions: 4
+// Case No =38
+// Case No =38
+
+/* Case No =38 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack2'] =='TurnUp' &&
+    $row['ema3slopeDirection'] =='Down' &&
+    abs($row['ema3SlopeValue']) > 20) {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-16(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-16(R)';
+    }
+}
+
+// Step 6-17@
+// Number of conditions: 4
+// Case No =39
+// Case No =39
+
+/* Case No =39 */
+if ($row['PreviousTurnType'] =='TurnUp' && 
+    $row['PreviousTurnTypeBack2'] =='TurnDown' && 
+    ($row['emaConflict']) == '5-3-G' && 
+    $row['ema3slopeDirection'] =='Up') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-@17(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-@17(R)';
+    }
+}
+
+// Step 6-22
+// Number of conditions: 4
+// Case No =40
+// Case No =40
+
+/* Case No =40 */
+if ($row['PreviousTurnType'] =='N' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['emaConflict'] == '3-5-R' && 
+    $row['ema3slopeDirection'] =='Up') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-22(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-22(R)';
+    }
+}
+
+// Step 6-24
+// Number of conditions: 4
+// Case No =41
+// Case No =41
+
+/* Case No =41 */
+if ($row['PreviousTurnType'] =='N' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['ema3slopeDirection'] =='Down' && 
+    $row['emaConflict'] =='5-3-G') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-24(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-24(R)';
+    }
+}
+
+// Step 6-25-2
+// Number of conditions: 4
+// Case No =42
+// Case No =42
+
+/* Case No =42 */
+if ($row['PreviousTurnType'] =='TurnUp' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['ema3slopeDirection'] =='Up' && 
+    (abs($row['MACDHeight']) < 4)) {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-25-2(G)-'. abs($row['MACDHeight']);
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-25-2(R)-'.abs($row['MACDHeight']);
+    }
+}
+
+// Step 6-25-3
+// Number of conditions: 4
+// Case No =43
+// Case No =43
+
+/* Case No =43 */
+if ($row['PreviousTurnType'] =='TurnUp' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['ema3slopeDirection'] =='Up' && 
+    (abs($row['MACDHeight']) > 5)) {
+    if ( $row['thisColor'] =='Green') {    
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-25-3(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-25-3(R)';
+    }
+}
+
+// Step 6-26-2
+// Number of conditions: 4
+// Case No =44
+// Case No =44
+
+/* Case No =44 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['ema3slopeDirection'] =='Down' && 
+    $row['MACDHeight'] < 4) {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-26-2(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-26-2(R)';
+    }
+}
+
+// Step 6-26-3
+// Number of conditions: 4
+// Case No =45
+// Case No =45
+
+/* Case No =45 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['ema3slopeDirection'] =='Down' && 
+    $row['CutPointType'] =='3->5') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-26-3(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-26-3(R)';
+    }
+}
+
+// Step 6-26-4
+// Number of conditions: 4
+// Case No =46
+// Case No =46
+
+/* Case No =46 */
+if ($row['PreviousTurnType'] =='N' && 
+    $row['PreviousTurnTypeBack2'] =='TurnDown' &&
+    $row['PreviousTurnTypeBack3'] =='N' &&
+    $row['ema3slopeDirection'] =='Down') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-26-4(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-26-4(R)';
+    }
+}
+
+// Step 6-26-5
+// Number of conditions: 4
+// Case No =47
+// Case No =47
+
+/* Case No =47 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['ema3slopeDirection'] =='Down' && 
+    $row['emaConflict'] =='3-5-R') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-26-5(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-26-5(R)';
+    }
+}
+
+// CodeNew-1-1 (Conflict+MACD)
+// Number of conditions: 4
+// Case No =48
+// Case No =48
+
+/* Case No =48 */
+if (        
+    $row['emaConflict'] =='N' &&
+    $row['PreviousTurnType'] =='TurnUp' &&
+    $row['PreviousTurnTypeBack2'] =='TurnDown' &&
+    $row['previousColor'] =='Green') {
+    $thisAction = 'CALL'; 
+    $forecastColor = 'Green';
+    
+    
+    $actionReason .= '->CodeNew-1-1(G)';
+}
+
+// Step 2-1
+// Number of conditions: 3
+// Case No =49
+// Case No =49
+
+/* Case No =49 */
+if ($row['emaConflict'] == '3-5-R' && 
+    $row['MACDConvergence'] == 'Diver' && 
+    $row['ema3slopeDirection'] != 'Up') {
+    $thisAction = 'PUT'; 
+    $forecastColor = 'Red';
+    
+    
+    $actionReason .= '->Code2_1(R)';
+}
+
+// Step 3-1
+// Number of conditions: 3
+// Case No =50
+// Case No =50
+
+/* Case No =50 */
+if ($row['PreviousSlopeDirection'] !== $row['ema3slopeDirection'] && 
+    $LockedAction == false && 
+    $row['PreviousSlopeDirection'] !=='N') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code3-1(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code3-1(R)';
+    }
+}
+
+// Step 6-7-1
+// Number of conditions: 3
+// Case No =51
+// Case No =51
+
+/* Case No =51 */
+if ($row['ema3slopeDirection'] =='Up' && 
+    $row['emaConflict'] =='3-5-R' &&
+    $row['PreviousTurnTypeBack2'] == 'TurnUp') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-7-1(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-7-1(R)';
+    }
+}
+
+// Step 6-9-4
+// Number of conditions: 3
+// Case No =52
+// Case No =52
+
+/* Case No =52 */
+if ($row['ema3slopeDirection'] =='Up' && 
+    $row['emaConflict'] =='5-3-G' &&
+    $row['PreviousTurnType'] == 'TurnUp') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-9-4(G77)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-9-4(R77)';
+    }
+}
+
+// Step 6-10
+// Number of conditions: 3
+// Case No =53
+// Case No =53
+
+/* Case No =53 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['PreviousTurnType'] =='TurnDown' && 
+    $row['emaConflict'] =='') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-10(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-10(R)';
+    }
+}
+
+// Step 6-11
+// Number of conditions: 3
+// Case No =54
+// Case No =54
+
+/* Case No =54 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack2'] =='TurnUp' && 
+    $row['emaConflict'] =='N') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-11(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-11(R)';
+    }
+}
+
+// Step 6-14
+// Number of conditions: 3
+// Case No =55
+// Case No =55
+
+/* Case No =55 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack2'] =='TurnUp' && 
+    abs($row['ema3SlopeValue']) < 0.9) {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-14(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-14(R)';
+    }
+}
+
+// Step 6-15
+// Number of conditions: 3
+// Case No =56
+// Case No =56
+
+/* Case No =56 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack2'] =='TurnUp' && 
+    abs($row['ema3SlopeValue']) < 0.9) {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-15(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-15(R)';
+    }
+}
+
+// Step 6-16
+// Number of conditions: 3
+// Case No =57
+// Case No =57
+
+/* Case No =57 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack2'] =='TurnUp' && 
+    abs($row['ema3SlopeValue']) > 0.9) {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-16(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-16(R)';
+    }
+}
+
+// Step 6-17
+// Number of conditions: 3
+// Case No =58
+// Case No =58
+
+/* Case No =58 */
+if ($row['PreviousTurnType'] =='TurnUp' && 
+    $row['PreviousTurnTypeBack2'] =='TurnDown' && 
+    ($row['emaConflict']) == '5-3-G') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-17(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-17(R)';
+    }
+}
+
+// Step 6-18
+// Number of conditions: 3
+// Case No =59
+// Case No =59
+
+/* Case No =59 */
+if ($row['PreviousTurnType'] =='TurnUp' && 
+    $row['PreviousTurnTypeBack2'] =='N' && 
+    ($row['emaConflict']) == '5-3-G') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-18(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-18(R)';
+    }
+}
+
+// Step 6-19
+// Number of conditions: 3
+// Case No =60
+// Case No =60
+
+/* Case No =60 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack2'] =='TurnUp' &&
+    $row['emaConflict'] == '3-5-R') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-19(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-19(R)';
+    }
+}
+
+// Step 6-19-2
+// Number of conditions: 3
+// Case No =61
+// Case No =61
+
+/* Case No =61 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack2'] =='TurnUp' &&
+    $row['emaConflict'] == 'N') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-19-2@(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-19-2@(R)';
+    }
+}
+
+// Step 6-20-2
+// Number of conditions: 3
+// Case No =62
+// Case No =62
+
+/* Case No =62 */
+if ($row['PreviousTurnType'] =='TurnUp' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['MACDHeight'] < 4) {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-20-2(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-20-2(R)';
+    }
+}
+
+// Step 6-21
+// Number of conditions: 3
+// Case No =63
+// Case No =63
+
+/* Case No =63 */
+if ($row['PreviousTurnType'] =='N' && 
+    $row['PreviousTurnTypeBack2'] =='TurnDown' &&
+    $row['emaConflict'] == '5-3-G') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-21(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-21(R)';
+    }
+}
+
+// Step 6-23
+// Number of conditions: 3
+// Case No =64
+// Case No =64
+
+/* Case No =64 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack2'] =='TurnUp' &&
+    abs($row['ema3SlopeValue']) < 0.8) {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-5(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-5(R)';
+    }  
+}
+
+// Step 6-25
+// Number of conditions: 3
+// Case No =65
+// Case No =65
+
+/* Case No =65 */
+if ($row['PreviousTurnType'] =='TurnUp' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['ema3slopeDirection'] =='Up') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-25(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-25(R)';
+    }
+}
+
+// Step 6-26
+// Number of conditions: 3
+// Case No =66
+// Case No =66
+
+/* Case No =66 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack2'] =='N' &&
+    $row['ema3slopeDirection'] =='Down') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-26(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-26(R)';
+    }
+}
+
+// Step 6-26-7
+// Number of conditions: 3
+// Case No =67
+// Case No =67
+
+/* Case No =67 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack2'] =='TurnUp' &&
+    $row['PreviousTurnTypeBack3'] =='TurnDown') {
+    if ( $row['thisColor'] =='Red' || $row['thisColor'] =='Equal') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-26-7(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-26-7(R)';
+    }
+}
+
+// CodeNew-2-1
+// Number of conditions: 3
+// Case No =68
+// Case No =68
+
+/* Case No =68 */
+if (        
+    $row['emaConflict'] =='53G' &&
+    $row['PreviousTurnType'] =='N' &&
+    $row['emaAbove'] =='5') {
+    $thisAction = 'PUT'; 
+    $forecastColor = 'Red';
+    
+    
+    $actionReason .= '->CodeNew-2-1(R)';
+}
+
+// Step 6-1
+// Number of conditions: 2
+// Case No =69
+// Case No =69
+
+/* Case No =69 */
+if ($row['PreviousTurnType'] =='TurnUp' && 
+    $row['MACDConvergence'] =='Diver') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-1(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-1(R)';
+    }
+}
+
+// Step 6-2
+// Number of conditions: 2
+// Case No =70
+// Case No =70
+
+/* Case No =70 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['emaConflict'] =='3-5-R') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-2(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-2(R)';
+    }
+}
+
+// Step 6-3
+// Number of conditions: 2
+// Case No =71
+// Case No =71
+
+/* Case No =71 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['emaConflict'] =='N') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-3(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-3(R)';
+    }
+}
+
+// Step 6-4
+// Number of conditions: 2
+// Case No =72
+// Case No =72
+
+/* Case No =72 */
+if ($row['PreviousTurnType'] =='TurnUp' && 
+    $row['emaConflict'] =='5-3-G') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-4(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-4(R)';
+    }
+}
+
+// Step 6-6
+// Number of conditions: 2
+// Case No =73
+// Case No =73
+
+/* Case No =73 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['emaConflict'] !='3-5-R') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-6(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-6(R)';
+    }
+}
+
+// Step 6-7
+// Number of conditions: 2
+// Case No =74
+// Case No =74
+
+/* Case No =74 */
+if ($row['ema3slopeDirection'] =='Up' && 
+    $row['emaConflict'] =='3-5-R') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-7(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-7(R)';
+    }
+}
+
+// Step 6-8
+// Number of conditions: 2
+// Case No =75
+// Case No =75
+
+/* Case No =75 */
+if ($row['ema3slopeDirection'] =='Down' && 
+    $row['emaConflict'] =='3-5-R') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-8(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-8(R)';
+    }
+}
+
+// Step 6-9
+// Number of conditions: 2
+// Case No =76
+// Case No =76
+
+/* Case No =76 */
+if ($row['ema3slopeDirection'] =='Up' && 
+    $row['emaConflict'] =='5-3-G') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-9(G77)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-9(R77)';
+    }
+}
+
+// Step 6-20
+// Number of conditions: 2
+// Case No =77
+// Case No =77
+
+/* Case No =77 */
+if ($row['PreviousTurnType'] =='TurnUp' && 
+    $row['PreviousTurnTypeBack2'] =='N') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-20(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-20(R)';
+    }
+}
+
+// Step 6-24-5
+// Number of conditions: 2
+// Case No =78
+// Case No =78
+
+/* Case No =78 */
+if ($row['PreviousTurnType'] =='TurnDown' && 
+    $row['PreviousTurnTypeBack2'] =='TurnUp') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-24-5(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-24-5(R)';
+    }
+}
+
+// CodeNew-1-1
+// Number of conditions: 2
+// Case No =79
+// Case No =79
+
+/* Case No =79 */
+if (
+    $row['PreviousTurnType'] =='N' &&
+    $row['PreviousTurnTypeBack2'] =='N') {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->CodeNew-1-1(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->CodeNew-1-1(R)';
+    }
+}
+
+// MACDHeight < macdThershold
+// Number of conditions: 2
+// Case No =80
+// Case No =80
+
+/* Case No =80 */
+if (abs($row['MACDHeight']) < $macdThershold) {
+    if ($actionReason !='Code2') {      
+        $thisAction = 'Idle'; 
+        $remark .= ' ,MACD ..น้อยกว่า  ' .$macdThershold;
+    }
+}
+
+// Step 1-1 (Down)
+// Number of conditions: 1
+// Case No =81
+// Case No =81
+
+/* Case No =81 */
+if ($slopeDirection=='Down') {
+    $thisAction = 'PUT'; 
+    $forecastColor = 'Red';
+    
+    $ActionClass = 'bgRed';
+    $actionReason = 'Code1-1(R)';
+}
+
+// Step 1-1 (Up)
+// Number of conditions: 1
+// Case No =82
+// Case No =82
+
+/* Case No =82 */
+if ($slopeDirection=='Up') {
+    $thisAction = 'CALL'; 
+    $forecastColor = 'Green';
+    
+    $ActionClass = 'bgGreen';
+    $actionReason = 'Code1-1(G)';
+}
+
+// SlopeDirection == 'P'
+// Number of conditions: 1
+// Case No =83
+// Case No =83
+
+/* Case No =83 */
+if ($slopeDirection=='P') {
+    $thisAction = 'Idle'; 
+    $remark = ' Slope ขนาน ';
+}
+
+// thisColor == 'Equal'
+// Number of conditions: 1
+// Case No =84
+// Case No =84
+
+/* Case No =84 */
+if ($row['thisColor']=='Equal') {
+    $thisAction = 'Idle'; 
+    $remark .= ' ,Equal ';
+}
+
+// previousColor === previousColorBack2
+// Number of conditions: 1
+// Case No =85
+// Case No =85
+
+/* Case No =85 */
+if (
+    $row["previousColor"] === $row["previousColorBack2"]) {
+    if ( $row['thisColor'] =='Green') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->CodeNew-1-1(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->CodeNew-1-1(R)';
+    }
+}
+
+// Step 6-5
+// Number  Number of conditions: 1
+// Case No =86
+// Case No =86
+
+/* Case No =86 */
+if ($row['PreviousTurnType'] =='TurnUp') {
+    if ( $row['thisColor'] =='Red') {
+        $thisAction = 'CALL'; 
+        $forecastColor = 'Green';
+        
+        
+        $actionReason .= '->Code6-5(G)';
+    } else {
+        $thisAction = 'PUT'; 
+        $forecastColor = 'Red';
+        
+        
+        $actionReason .= '->Code6-5(R)';
+    }
+}
+
+?>
+
