@@ -1,0 +1,7 @@
+{
+    "Mode": "SaveTrade",
+    "tradeSectionNoOfDay": "2",
+    "curpairCode": "R_25",
+    "detailTrade": [],
+    "ohlcList": []
+}

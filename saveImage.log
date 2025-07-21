@@ -1,0 +1,53 @@
+[2025-06-26 08:03:21] [INFO] Inserted new chart for R_10 at 2025-06-26 08:03:21, ID: 1
+[2025-06-26 08:03:24] [INFO] Inserted new chart for R_25 at 2025-06-26 08:03:25, ID: 2
+[2025-06-26 08:03:28] [INFO] Inserted new chart for R_50 at 2025-06-26 08:03:28, ID: 3
+[2025-06-26 08:03:31] [INFO] Inserted new chart for R_75 at 2025-06-26 08:03:31, ID: 4
+[2025-06-26 08:03:34] [INFO] Inserted new chart for R_100 at 2025-06-26 08:03:34, ID: 5
+[2025-06-26 11:49:10] [INFO] Inserted new chart for R_10 at 2025-06-26 11:49:11, ID: 6
+[2025-06-26 11:49:14] [INFO] Inserted new chart for R_25 at 2025-06-26 11:49:15, ID: 7
+[2025-06-26 11:49:17] [INFO] Inserted new chart for R_50 at 2025-06-26 11:49:18, ID: 8
+[2025-06-26 11:49:20] [INFO] Inserted new chart for R_75 at 2025-06-26 11:49:21, ID: 9
+[2025-06-26 11:49:24] [INFO] Inserted new chart for R_100 at 2025-06-26 11:49:25, ID: 10
+[2025-06-26 11:56:40] [ERROR] Exception: Column 'sessionNo' cannot be null
+[2025-06-26 11:56:43] [ERROR] Exception: Column 'sessionNo' cannot be null
+[2025-06-26 11:56:47] [ERROR] Exception: Column 'sessionNo' cannot be null
+[2025-06-26 11:56:50] [ERROR] Exception: Column 'sessionNo' cannot be null
+[2025-06-26 11:56:53] [ERROR] Exception: Column 'sessionNo' cannot be null
+[2025-06-26 12:02:51] [ERROR] Exception: Column 'sessionNo' cannot be null
+[2025-06-26 12:02:54] [ERROR] Exception: Column 'sessionNo' cannot be null
+[2025-06-26 12:02:57] [ERROR] Exception: Column 'sessionNo' cannot be null
+[2025-06-26 12:03:01] [ERROR] Exception: Column 'sessionNo' cannot be null
+[2025-06-26 12:03:06] [ERROR] Exception: Column 'sessionNo' cannot be null
+[2025-06-26 12:04:09] [ERROR] Exception: Column 'sessionNo' cannot be null
+[2025-06-26 12:04:38] [ERROR] Exception: Column 'sessionNo' cannot be null
+[2025-06-26 12:04:59] [INFO] Inserted new chart for R_10 at 2025-06-26 12:04:59, ID: 11
+[2025-06-26 12:06:40] [INFO] Inserted new chart for R_10 at 2025-06-26 12:06:41, ID: 12
+[2025-06-26 12:09:50] [INFO] Inserted new chart for R_10 at 2025-06-26 12:09:50, ID: 13
+[2025-06-26 12:13:58] [INFO] Inserted new chart for R_10 at 2025-06-26 12:13:59, ID: 14
+[2025-06-26 12:16:31] [INFO] Inserted new chart for R_10 at 2025-06-26 12:16:32, ID: 15
+[2025-06-26 12:16:45] [INFO] Inserted new chart for R_10 at 2025-06-26 12:16:46, ID: 16
+[2025-06-26 12:19:31] [INFO] Inserted new chart for R_10 at 2025-06-26 12:19:32, ID: 17
+[2025-06-26 12:19:35] [INFO] Inserted new chart for R_25 at 2025-06-26 12:19:35, ID: 18
+[2025-06-26 12:19:38] [INFO] Inserted new chart for R_50 at 2025-06-26 12:19:38, ID: 19
+[2025-06-26 12:19:41] [INFO] Inserted new chart for R_75 at 2025-06-26 12:19:42, ID: 20
+[2025-06-26 12:19:44] [INFO] Inserted new chart for R_100 at 2025-06-26 12:19:45, ID: 21
+[2025-06-26 12:24:27] [ERROR] Exception: Column 'sessionNo' cannot be null
+[2025-06-26 12:24:30] [ERROR] Exception: Column 'sessionNo' cannot be null
+[2025-06-26 12:24:33] [ERROR] Exception: Column 'sessionNo' cannot be null
+[2025-06-26 12:24:36] [ERROR] Exception: Column 'sessionNo' cannot be null
+[2025-06-26 12:24:40] [ERROR] Exception: Column 'sessionNo' cannot be null
+[2025-06-26 12:25:37] [INFO] Inserted new chart for R_10 at 2025-06-26 12:25:38, ID: 22
+[2025-06-26 12:25:41] [INFO] Inserted new chart for R_25 at 2025-06-26 12:25:42, ID: 23
+[2025-06-26 12:25:44] [INFO] Inserted new chart for R_50 at 2025-06-26 12:25:45, ID: 24
+[2025-06-26 12:25:47] [INFO] Inserted new chart for R_75 at 2025-06-26 12:25:48, ID: 25
+[2025-06-26 12:25:50] [INFO] Inserted new chart for R_100 at 2025-06-26 12:25:51, ID: 26
+[2025-06-26 12:34:54] [INFO] Inserted new chart for R_10 at 2025-06-26 12:34:55, ID: 27
+[2025-06-26 12:34:58] [INFO] Inserted new chart for R_25 at 2025-06-26 12:34:58, ID: 28
+[2025-06-26 12:35:01] [INFO] Inserted new chart for R_50 at 2025-06-26 12:35:02, ID: 29
+[2025-06-26 12:35:04] [INFO] Inserted new chart for R_75 at 2025-06-26 12:35:05, ID: 30
+[2025-06-26 12:35:07] [INFO] Inserted new chart for R_100 at 2025-06-26 12:35:08, ID: 31
+[2025-06-26 12:36:49] [INFO] Inserted new chart for R_10 at 2025-06-26 12:36:50, ID: 32
+[2025-06-26 12:36:52] [INFO] Inserted new chart for R_25 at 2025-06-26 12:36:53, ID: 33
+[2025-06-26 12:36:56] [INFO] Inserted new chart for R_50 at 2025-06-26 12:36:56, ID: 34
+[2025-06-26 12:36:59] [INFO] Inserted new chart for R_75 at 2025-06-26 12:37:00, ID: 35
+[2025-06-26 12:37:02] [INFO] Inserted new chart for R_100 at 2025-06-26 12:37:03, ID: 36
