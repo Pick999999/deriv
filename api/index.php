@@ -16,7 +16,7 @@ header('Access-Control-Allow-Origin: *');
 
   
    } else {   
-     echo "No Data USE Vercel IN API " ;
+     echo "No Data USE Vercel IN API V2" ;
    }
 ?>
     
