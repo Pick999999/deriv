@@ -8,7 +8,7 @@ ob_start();
    ini_set('display_startup_errors', 1);
    error_reporting(E_ALL);   
    $data = json_decode(file_get_contents('php://input'), true);
-   echo "Hello V3 " ;
+   echo "Hello V3-2 " ;
   if ($data) {
       //if ($data['Mode'] == 'getAction') { getActionV3($data); }
 	     //if ($data['Mode'] == 'getLastAction') { getActionV3($data); }
