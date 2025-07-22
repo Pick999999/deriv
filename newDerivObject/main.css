@@ -1,0 +1,135 @@
+table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            cursor: pointer;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+ 
+.sarabun-regular {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.bordergray { border:1px solid gray ; padding:12px }
+.container { max-width:2100px;}
+.flex { display:flex; flex-direction:row ; flex-wrap: wrap;}
+.flexColumn { display:flex; flex-direction:column ;}
+
+.gray { background: gray; color:white }
+.mBtn { 
+
+
+    position: relative;
+    min-height: 44px;
+    border: 1px solid transparent;
+    background: #fff;
+    box-shadow: 0px 2px 8px 0px rgba(60, 64, 67, 0.25);
+    border-radius: 24px;
+    margin: 8px;
+    box-sizing: border-box;
+    width: 120px;
+	padding:8px;
+    text-align:center;
+}
+.boxShadow {
+    box-shadow: 0px 2px 8px 0px rgba(60, 64, 67, 0.25);
+    border-radius: 8px;
+}
+.pad8 {  padding:8px; }
+.width0 { width:0% ; display:none }
+.width30 { width:30% }
+.width50 { width:50% }
+.width70 { width:70% }
+.width100 { width:100% }
+.green { background:#80ff80 ; }
+.pink { background:#ff0080 ; }
+.myContainer {
+  position:relative;
+  width: calc(100% - 100px); 
+ }
+.sideBar {
+  position:fixed; 
+  width:80px ; 
+  right:0px ;
+  background:lightblue ;
+  top:0px; 
+  height:100vh ;
+  margin-left:2px;
+  border-left:0px solid whitesmoke; 
+  padding:5px;
+ }
+.btn { margin-top:5px; } 
+
+/* Toog*/ 
+
+/* ปรับขนาดสวิตช์ให้เล็กลง */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px; /* ปรับความกว้าง */
+  height: 20px; /* ปรับความสูง */
+}
+
+/* ซ่อน checkbox ต้นฉบับ */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* สไตล์สไลเดอร์ */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px; /* ปรับความสูงของสไลเดอร์ */
+  width: 16px; /* ปรับความกว้างของสไลเดอร์ */
+  left: 2px; /* ปรับตำแหน่งเริ่มต้น */
+  bottom: 2px; /* ปรับตำแหน่งเริ่มต้น */
+  background-color: white;
+  transition: 0.4s;
+}
+
+/* เมื่อ checkbox ถูกเลือก */
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+/* เคลื่อนสไลเดอร์เมื่อ checkbox ถูกเลือก */
+input:checked + .slider:before {
+  transform: translateX(20px); /* ปรับระยะการเคลื่อนที่ */
+}
+
+/* สไตล์สไลเดอร์แบบกลม */
+.slider.round {
+  border-radius: 20px; /* ปรับความโค้งของสวิตช์ */
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

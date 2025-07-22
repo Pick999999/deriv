@@ -1,0 +1,33 @@
+[
+    {
+        "startIndex": 0,
+        "endIndex": 51,
+        "startTime": 1742187600,
+        "endTime": 1742190660,
+        "period": 52,
+        "support": [
+            1809,
+            1819,
+            1807
+        ],
+        "resistance": [
+            1817,
+            1821,
+            1809
+        ]
+    },
+    {
+        "startIndex": 53,
+        "endIndex": 60,
+        "startTime": 1742190780,
+        "endTime": 1742191200,
+        "period": 8,
+        "support": [
+            1799
+        ],
+        "resistance": [
+            1808,
+            1802
+        ]
+    }
+]
