@@ -14,7 +14,7 @@ header('Access-Control-Allow-Origin: *');
       $sObj->candleID   = 'AAAA';
       echo JSON_ENCODE($sObj) ;
 
-  $sObj->timefrom_unix   = $result2[$i]["timefrom_unix"] ;
+  
    } else {   
      echo "No Data USE Vercel IN API " ;
    }
