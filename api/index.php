@@ -12,7 +12,7 @@ header('Access-Control-Allow-Origin: *');
       $sObj = new stdClass();
       $sObj->No   = 1 ;
       $sObj->candleID   = 'AAAA-ฺฺฺฺBBBB';
-      echo JSON_ENCODE($sObj) ;
+      echo JSON_ENCODE($sObj,JSON_UNESCAPED_UNICODE) ;
 
   
    } else {   
