@@ -21,8 +21,8 @@ ob_start();
 
 function getCandleData2() {
 
- $newUtilPath = '../newDerivObject/';
- $sFileName =  $newUtilPath.'rawData.json';
+ 
+ $sFileName =  'rawData.json';
  $st = '';
  $file = fopen($sFileName,"r");
  while(! feof($file))  {
