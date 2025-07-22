@@ -8,7 +8,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/getaction/v3/index.php"
+      "dest": "/api/index.php"
     }
   ]
 }
