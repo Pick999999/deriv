@@ -21,7 +21,7 @@ ob_start();
 
 function getCandleData2() {
 
- $newUtilPath = '/home/thepaper/domains/thepapers.in/private_html/deriv/newDerivObject/';
+ $newUtilPath = '../../newDerivObject/';
  $sFileName =  $newUtilPath.'rawData.json';
  $st = '';
  $file = fopen($sFileName,"r");
