@@ -14,9 +14,10 @@ header('Access-Control-Allow-Origin: *');
       $sObj->candleID   = 'AAAA-ฺฺฺฺBBBB';
       echo JSON_ENCODE($sObj,JSON_UNESCAPED_UNICODE) ;
 
-  
    } else {   
-     echo "No Data USE Vercel IN API V2" ;
+     date_default_timezone_set('Asia/Bangkok'); // Set your desired timezone, e.g., 'America/New_York', 'Europe/London'
+     echo "เวลาปัจจุบัน: " . date("H:i:s");
+     echo "No Data USE Vercel IN API V22 " .  ;
    }
 ?>
     
