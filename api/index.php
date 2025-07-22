@@ -16,7 +16,7 @@ header('Access-Control-Allow-Origin: *');
 
    } else {        
      echo "เวลาปัจจุบัน: " . date("H:i:s");
-     echo "No Data USE Vercel IN API V22 " .  ;
+     echo "No Data USE Vercel IN API V22 (api/index.php) " .  ;
    }
 ?>
     
