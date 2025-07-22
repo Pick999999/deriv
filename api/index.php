@@ -14,8 +14,7 @@ header('Access-Control-Allow-Origin: *');
       $sObj->candleID   = 'AAAA-ฺฺฺฺBBBB';
       echo JSON_ENCODE($sObj,JSON_UNESCAPED_UNICODE) ;
 
-   } else {   
-     date_default_timezone_set('Asia/Bangkok'); // Set your desired timezone, e.g., 'America/New_York', 'Europe/London'
+   } else {        
      echo "เวลาปัจจุบัน: " . date("H:i:s");
      echo "No Data USE Vercel IN API V22 " .  ;
    }
