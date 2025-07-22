@@ -1,5 +1,5 @@
 <?php
-
+echo 'Hello';
 header('Access-Control-Allow-Methods: GET, POST');
 header('Access-Control-Allow-Origin: *'); 
    ob_start();
