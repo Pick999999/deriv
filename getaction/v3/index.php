@@ -2,21 +2,18 @@
 header('Access-Control-Allow-Methods: GET, POST');
 header('Access-Control-Allow-Origin: *'); 
 ob_start();
-//https://www.thaicreate.com/community/login-php-jquery-2encrypt.html
-//https://www.cyfence.com/article/design-secured-api/
 
    ini_set('display_errors', 1);
    ini_set('display_startup_errors', 1);
    error_reporting(E_ALL);   
    $data = json_decode(file_get_contents('php://input'), true);
-   if ($data) {
-      
-      
+   if ($data) {      
       if ($data['Mode'] == 'getAction') { getActionV3($data); }
 	  if ($data['Mode'] == 'getLastAction') { getActionV3($data); }
       return;
    } else {
-      getActionV3($data='');
+	  echo 'No Data ';
+      // getActionV3($data='');
    }
 
 function getActionV3($data) {
@@ -130,7 +127,7 @@ echo  $s;
 
 function getCandleData2() {
 
- $newUtilPath = '/home/thepaper/domains/thepapers.in/private_html/deriv/newDerivObject/';
+ 
  $sFileName =  'rawData.json';
  $st = '';
  $file = fopen($sFileName,"r");
@@ -141,7 +138,7 @@ function getCandleData2() {
  $candleDataA = JSON_DECODE($st,true);
 
  
- echo 'Len=' . count($candleDataA) . '<br>';
+ //echo 'Len=' . count($candleDataA) . '<br>';
  return $candleDataA ;
 
 } // end function
@@ -149,3 +146,4 @@ function getCandleData2() {
 
 
 ?>
+
