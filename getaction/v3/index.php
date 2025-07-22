@@ -1,6 +1,6 @@
 <?php
 header('Access-Control-Allow-Methods: GET, POST');
-//header('Access-Control-Allow-Origin: *'); 
+header('Access-Control-Allow-Origin: *'); 
 ob_start();
 //https://www.thaicreate.com/community/login-php-jquery-2encrypt.html
 //https://www.cyfence.com/article/design-secured-api/
@@ -10,8 +10,8 @@ ob_start();
    error_reporting(E_ALL);   
    $data = json_decode(file_get_contents('php://input'), true);
    if ($data) {
-      $newUtilPath = '/home/thepaper/domains/thepapers.in/private_html/deriv/';
-      require_once($newUtilPath ."newutil2.php");	
+      
+      
       if ($data['Mode'] == 'getAction') { getActionV3($data); }
 	  if ($data['Mode'] == 'getLastAction') { getActionV3($data); }
       return;
@@ -21,28 +21,29 @@ ob_start();
 
 function getActionV3($data) {
 
-$newUtilPath = '/home/thepaper/domains/thepapers.in/private_html/';
-require_once($newUtilPath.'iqlab/sortGetAction.php');
+$newUtilPath = '';
+require_once( '../../iqlab/sortGetAction.php');
 if ($data=='') {
   $candleData = getCandleData2() ;
 } else {
   $candleData = $data['candles'] ;
 }
 
-require_once($newUtilPath. 'deriv/api/phpCandlestickIndy.php');
+require_once( '../../api/phpCandlestickIndy.php');
 $clsStep1 = new TechnicalIndicators();   
 
-require_once($newUtilPath.'deriv/api/phpAdvanceIndy.php');
+require_once('../../api/phpAdvanceIndy.php');
 $clsStep2 = new AdvancedIndicators();   
 $result = $clsStep1->calculateIndicators($candleData);
 $result2= $clsStep2->calculateAdvancedIndicators($result);
 //$result2= Final_AdvanceIndy($result2)  ;
 
 $stAnaly = JSON_ENCODE($result2, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ;
-$myfile = fopen($newUtilPath."deriv/newDerivObject/AnalyDataBig.json", "w") or die("Unable to open file!");
+/*
+$myfile = fopen("deriv/newDerivObject/AnalyDataBig.json", "w") or die("Unable to open file!");
 fwrite($myfile, $stAnaly);
 fclose($myfile); 
-
+*/
 $macdThershold = 0.1 ; $lastMacdHeight = 0 ;
 $sAr = array(); $winCon = 0 ; $lossCon = 0 ; $LotNo = 0 ;
 $balance=0 ; $maxBalance= 0 ; $maxLossCon = 0 ;
@@ -130,7 +131,7 @@ echo  $s;
 function getCandleData2() {
 
  $newUtilPath = '/home/thepaper/domains/thepapers.in/private_html/deriv/newDerivObject/';
- $sFileName =  $newUtilPath.'rawData.json';
+ $sFileName =  'rawData.json';
  $st = '';
  $file = fopen($sFileName,"r");
  while(! feof($file))  {
