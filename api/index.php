@@ -12,8 +12,10 @@ ob_start();
   if ($data) {
       //if ($data['Mode'] == 'getAction') { getActionV3($data); }
 	     //if ($data['Mode'] == 'getLastAction') { getActionV3($data); }
+      echo "Have Data Post" ;	    
       return;   
    } else {
+      echo "No Data Use Raw Data"	  
       //$candleData = getActionV3($data='');
       $candleData = getCandleData2();
       echo ' Len= ' . len($candleData) ;
